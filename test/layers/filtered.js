@@ -11,6 +11,10 @@ var fil = new FilteredStore(mem, {
   collectionB: {safe: true}
 });
 
+var timeout = setTimeout(function () {
+  throw new Error('layers/filtered.js timed out');
+}, 30000);
+
 var initialData = Promise.all([
   mem.collectionA.insert({value: 'itemA1'}),
   mem.collectionA.insert({value: 'itemA2'}),
@@ -66,4 +70,6 @@ initialData.then(function () {
   }).then(function (items) {
     assert.deepEqual(['itemB1', 'itemB4'], items.map(function (item) { return item.value; }));
   });
-}).done();
+}).done(function () {
+  clearTimeout(timeout);
+});
