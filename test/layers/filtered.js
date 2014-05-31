@@ -57,5 +57,13 @@ initialData.then(function () {
     return mem.collectionB.find()
   }).then(function (items) {
     assert.deepEqual(['itemB1', 'itemB2-updated', 'itemB4'], items.map(function (item) { return item.value; }));
+    return Promise.all([
+      fil.collectionB.remove({value: 'itemB1'}), // fails
+      fil.collectionB.remove({value: 'itemB2-updated'})  // succceeds
+    ]);
+  }).then(function () {
+    return mem.collectionB.find()
+  }).then(function (items) {
+    assert.deepEqual(['itemB1', 'itemB4'], items.map(function (item) { return item.value; }));
   });
 }).done();
