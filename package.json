@@ -1,0 +1,20 @@
+{
+  "name": "localise",
+  "version": "0.0.0",
+  "description": "Localise your database",
+  "keywords": [],
+  "dependencies": {
+    "guid": "0.0.12",
+    "promise": "~5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ForbesLindesay/localise.git"
+  },
+  "author": "ForbesLindesay",
+  "license": "MIT"
+}
