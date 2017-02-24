@@ -1,5 +1,7 @@
 # localise
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ForbesLindesay/localise.svg)](https://greenkeeper.io/)
+
 Localise your database
 
 [![Build Status](https://img.shields.io/travis/ForbesLindesay/localise/master.svg)](https://travis-ci.org/ForbesLindesay/localise)

@@ -5,7 +5,7 @@
   "keywords": [],
   "dependencies": {
     "guid": "0.0.12",
-    "promise": "~5.0.0"
+    "promise": "~7.1.1"
   },
   "devDependencies": {},
   "scripts": {
